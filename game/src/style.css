@@ -1,0 +1,28 @@
+/* SHADOW LEDGER — page chrome. The game itself is drawn on the canvas;
+   this file only centers it on a dark page and hides the status line. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #070b14;
+}
+#game {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(100vw, 160vh);
+  height: auto;
+  aspect-ratio: 1280 / 800;
+  display: block;
+  touch-action: none;
+  background: #0d1220;
+}
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
